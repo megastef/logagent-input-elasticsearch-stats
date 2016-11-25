@@ -51,7 +51,7 @@ ElasticsearchStats.prototype.queryStats = function (url, context) {
     if (result instanceof Error) {
       console.error('Error (' + url +'): ', result.message)
     } else {
-      if (this.config.debug) {
+      if (self.config.debug) {
         console.log(JSON.stringify(result, null, '\t'))
       }
       self.eventEmitter.emit('data.raw', JSON.stringify(result), context)
