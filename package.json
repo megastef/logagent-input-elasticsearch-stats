@@ -1,0 +1,27 @@
+{
+  "name": "logagent-input-elasticsearch-stats",
+  "version": "1.0.0",
+  "description": "Monitoring for Elasticsearch with Logagent ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megastef/logagent-input-elasticsearch-stats.git"
+  },
+  "keywords": [
+    "monitoring",
+    "elasticsearch"
+  ],
+  "author": "Stefan Thies",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/megastef/logagent-input-elasticsearch-stats/issues"
+  },
+  "homepage": "https://github.com/megastef/logagent-input-elasticsearch-stats#readme",
+  "dependencies": {
+    "flat": "^2.0.1",
+    "restler": "^3.4.0"
+  }
+}
