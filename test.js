@@ -8,8 +8,8 @@ function test () {
     configFile: {
       input: {
         elasticsearchStats: {
-          url: 'http://163.172.160.53:9200',
-          debug: true
+          url: 'http://localhost:9200',
+          debug: false
         }
       }
     }
