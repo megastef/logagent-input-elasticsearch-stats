@@ -72,7 +72,7 @@ ElasticsearchStats.prototype.transformStats = function (_stats, context) {
           shardArray[j].index_name = index.index_name
           shardArray[j].shard_number_str = String(shardNames[k])
           shardArray[j].shard_number_int = Number(shardNames[k])
-          shardArray[j].type = 'shard_details'
+          shardArray[j].stats_type = 'shard_details'
           this.emitData(shardArray[j], context)
         }
       }
