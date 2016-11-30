@@ -9,7 +9,7 @@ function test () {
       input: {
         elasticsearchStats: {
           url: 'http://localhost:9200',
-          debug: false
+          debug: true
         }
       }
     }
