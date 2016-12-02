@@ -28,7 +28,7 @@ ElasticsearchStats.prototype.start = function () {
   var self = this
   this.tid = setInterval(function () {
     for (var i = 0; i < urls.length; i++) {
-      var context = {source: 'elasticsearchStats', url: self.config.url + urls[i]}
+      var context = {sourceName: 'elasticsearchStats', url: self.config.url + urls[i]}
       self.queryStats(context.url, context)
     }
   }, 10000)
