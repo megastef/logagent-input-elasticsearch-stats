@@ -6,10 +6,10 @@ var nodesStatsURL = '/_nodes/stats';
 // '/_stats/indexing,store,search,merge,refresh,flush,docs,get?level=shards'
 var flat = require('flat')
 /**
- * Constructor called by logagent, when the config file contains tis entry:
+ * Constructor called by logagent, when the config file contains this entry:
  * input
  *  elasticsearchStats:
- *    module: megastef/logagent-input-elasticsearch-stats
+ *    module: logagent-input-elasticsearch-stats
  *    utl: http://localhost:9200
  *
  * @config cli arguments and config.configFile entries
