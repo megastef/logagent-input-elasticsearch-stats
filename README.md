@@ -21,6 +21,7 @@ input:
       module: logagent-input-elasticsearch-stats 
       url: 'http://localhost:9200'
       debug: false
+      nodesStats: true
 
 output:
   elasticsearch:

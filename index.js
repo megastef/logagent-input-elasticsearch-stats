@@ -1,6 +1,8 @@
 'use strict'
 var rest = require('restler')
-var urls = ['/_cluster/health', '/_nodes/_local/stats', '/_stats?level=shards']
+var urls = ['/_cluster/health', '/_stats?level=shards']
+var localNodeStatsURL = '/_nodes/_local/stats';
+var nodesStatsURL = '/_nodes/stats';
 // '/_stats/indexing,store,search,merge,refresh,flush,docs,get?level=shards'
 var flat = require('flat')
 /**
@@ -17,6 +19,11 @@ function ElasticsearchStats (config, eventEmitter) {
   this.config = config.configFile.input.elasticsearchStats
   this.config.url = config.configFile.input.elasticsearchStats.url
   this.eventEmitter = eventEmitter
+  if (config.nodesStats) {
+    urls.push(nodesStatsURL);
+  } else {
+    urls.push(localNodeStatsURL);
+  }
 }
 
 /**
@@ -84,10 +91,9 @@ ElasticsearchStats.prototype.transformStats = function (_stats, context) {
   }
 }
 
-ElasticsearchStats.prototype.transformLocalStats = function (_stats, context) {
+ElasticsearchStats.prototype.transformNodesStats = function (_stats, context) {
   try {
     var nodes = Object.keys(_stats.nodes)
-    console.log(_stats)
     for (var i = 0; i < nodes.length; i++) {
       var node = _stats.nodes[nodes[i]]
       node.stats_type = 'node_stats'
@@ -109,8 +115,8 @@ ElasticsearchStats.prototype.queryStats = function (url, context) {
       if (/_cluster\/health$/i.test(url)) {
         self.emitData(result, context)
       }
-      if (/_local\/stats/i.test(url)) {
-        self.transformLocalStats(result, context)
+      if (/_nodes.*\/stats/i.test(url)) {
+        self.transformNodesStats(result, context)
       }
       if (/_stats\?level=shards/i.test(url)) {
         self.transformStats(result, context)
