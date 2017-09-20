@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/megastef/logagent-input-elasticsearch-stats.git"
+    "url": "git+https://github.com/sematext/logagent-input-elasticsearch-stats.git"
   },
   "keywords": [
     "monitoring",
@@ -17,9 +17,9 @@
   "author": "Stefan Thies",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/megastef/logagent-input-elasticsearch-stats/issues"
+    "url": "https://github.com/sematext/logagent-input-elasticsearch-stats/issues"
   },
-  "homepage": "https://github.com/megastef/logagent-input-elasticsearch-stats#readme",
+  "homepage": "https://github.com/sematext/logagent-input-elasticsearch-stats#readme",
   "dependencies": {
     "flat": "^2.0.1",
     "restler": "^3.4.0"
