@@ -2,19 +2,19 @@
 
 Plugin to collect Elasticsearch stats  
 
-1. Install logagent 2.x 
+## Install logagent 2.x 
 
   ```
   npm i -g @sematext/logagent
   ```
 
-2. Install this plugin 
+## Install logagent-input-elasticsearch-stats plugin 
 
   ```
   npm i -g logagent-input-elasticsearch-stats  
   ```
 
-3. configure logagent 
+## Configure logagent 
 
   ```
   input:
@@ -36,7 +36,7 @@ Plugin to collect Elasticsearch stats
 
   ```
 
-4. Start logagent
+## Start logagent
 
   ```
   logagent --config myconfig.yml
