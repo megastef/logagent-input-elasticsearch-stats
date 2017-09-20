@@ -1,6 +1,6 @@
 {
   "name": "logagent-input-elasticsearch-stats",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Monitoring for Elasticsearch with Logagent ",
   "main": "index.js",
   "scripts": {
