@@ -16,12 +16,11 @@ npm i -g logagent-input-elasticsearch-stats
 
 ```
 input:
-  input:
-    elasticsearchStats:
-      module: logagent-input-elasticsearch-stats 
-      url: 'http://localhost:9200'
-      debug: false
-      nodesStats: true
+  elasticsearchStats:
+    module: logagent-input-elasticsearch-stats 
+    url: 'http://localhost:9200'
+    debug: false
+    nodesStats: true
 
 output:
   elasticsearch:
