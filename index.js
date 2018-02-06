@@ -1,6 +1,7 @@
 'use strict'
 var rest = require('restler')
-var urls = ['/_cluster/health', '/_stats?level=shards']
+var indexStatsURL = '/_stats?level=shards';
+var urls = ['/_cluster/health']
 var localNodeStatsURL = '/_nodes/_local/stats';
 var nodesStatsURL = '/_nodes/stats';
 // '/_stats/indexing,store,search,merge,refresh,flush,docs,get?level=shards'
@@ -23,6 +24,9 @@ function ElasticsearchStats (config, eventEmitter) {
     urls.push(nodesStatsURL);
   } else {
     urls.push(localNodeStatsURL);
+  }
+  if (!config.skipIndexStats) {
+    urls.push(indexStatsURL);
   }
 }
 
