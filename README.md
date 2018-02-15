@@ -23,6 +23,7 @@ Plugin to collect Elasticsearch stats
       url: 'http://localhost:9200'
       debug: false
       nodesStats: true
+      skipIndexStats: false
 
   output:
     elasticsearch:
