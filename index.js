@@ -11,7 +11,7 @@ var flat = require('flat')
  * input
  *  elasticsearchStats:
  *    module: logagent-input-elasticsearch-stats
- *    utl: http://localhost:9200
+ *    url: http://localhost:9200
  *
  * @config cli arguments and config.configFile entries
  * @eventEmitter logent eventEmitter object
